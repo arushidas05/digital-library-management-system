@@ -1,0 +1,53 @@
+/**
+ * Admin & Librarian Console Stylesheet
+ */
+
+.admin-toolbar {
+  background: #ffffff;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.table-action-btn {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  margin: 0 2px;
+}
+
+.copy-badge-pill {
+  padding: 0.25rem 0.6rem;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.status-available   { background: #d1fae5; color: #065f46; }
+.status-borrowed    { background: #fef3c7; color: #92400e; }
+.status-reserved    { background: #e0e7ff; color: #3730a3; }
+.status-maintenance { background: #e2e8f0; color: #475569; }
+.status-damaged     { background: #fee2e2; color: #991b1b; }
+.status-lost        { background: #fecdd3; color: #881337; }
+
+.status-issued      { background: #fef3c7; color: #92400e; }
+.status-returned    { background: #d1fae5; color: #065f46; }
+.status-overdue     { background: #fee2e2; color: #991b1b; }
+
+.filter-badge-btn {
+  font-size: 0.8rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 50px;
+}

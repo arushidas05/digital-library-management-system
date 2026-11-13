@@ -1,0 +1,139 @@
+/**
+ * Books Catalogue & Details Stylesheet
+ */
+
+/* Catalogue Grid */
+.book-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  background: #ffffff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px -5px rgba(0,0,0,0.1);
+}
+
+.book-cover-wrap {
+  position: relative;
+  width: 100%;
+  padding-top: 135%; /* 3:4 aspect ratio approx */
+  overflow: hidden;
+  background-color: #f1f5f9;
+}
+
+.book-cover-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.book-card:hover .book-cover-img {
+  transform: scale(1.03);
+}
+
+.book-format-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.book-info {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.book-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.35;
+  color: #1e293b;
+  margin-bottom: 0.35rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.book-author {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-bottom: 0.75rem;
+}
+
+.book-meta {
+  margin-top: auto;
+  padding-top: 0.75rem;
+  border-top: 1px solid #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Star Rating */
+.star-rating {
+  color: #f59e0b;
+  font-size: 0.85rem;
+}
+
+.star-rating .far {
+  color: #cbd5e1;
+}
+
+/* Book Details Page */
+.book-detail-cover {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.info-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  background-color: #f1f5f9;
+  color: #475569;
+}
+
+/* Interactive Star Rating Input */
+.star-rating-input {
+  display: inline-flex;
+  flex-direction: row-reverse;
+  gap: 0.25rem;
+}
+
+.star-rating-input input {
+  display: none;
+}
+
+.star-rating-input label {
+  cursor: pointer;
+  font-size: 1.75rem;
+  color: #cbd5e1;
+  transition: color 0.15s ease;
+}
+
+.star-rating-input label:hover,
+.star-rating-input label:hover ~ label,
+.star-rating-input input:checked ~ label {
+  color: #f59e0b;
+}
